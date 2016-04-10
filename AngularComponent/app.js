@@ -34,7 +34,7 @@ var EmailsEditor;
             },
             set: function (value) {
                 this._email = value;
-                this._isCorrect = EmailsEditor.Helper.checkemail(value);
+                this._isCorrect = EmailsEditor.Helper.checkEmail(value);
             },
             enumerable: true,
             configurable: true
@@ -180,7 +180,7 @@ var EmailsEditor;
     var Helper = (function () {
         function Helper() {
         }
-        Helper.checkemail = function (email) {
+        Helper.checkEmail = function (email) {
             return this._emailRegex.test(email);
         };
         Helper._emailRegex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;

@@ -12,7 +12,7 @@
 
         set email(value: string) {
             this._email = value;
-            this._isCorrect = Helper.checkemail(value);
+            this._isCorrect = Helper.checkEmail(value);
         }
 
         get isCorrect() {
