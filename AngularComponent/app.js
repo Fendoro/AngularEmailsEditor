@@ -62,7 +62,7 @@ var EmailsEditor;
         function EmailsEditorCtrl($scope, service) {
             this.$scope = $scope;
             this.service = service;
-            $scope.title = "emailsEditorCtrl";
+            $scope.title = "";
             $scope.emails = service.getEmails();
             $scope.frmData = {
                 inEmail: ""
@@ -120,6 +120,9 @@ var EmailsEditor;
             this.restrict = "E";
             this.templateUrl = "EmailsEditor\\DirectievesTemplates\\EmailsEditorDirectiveTemplate.html";
             this.controller = "emailsEditorCtrl";
+            this.scope = {
+                title: "@myTitle"
+            };
         }
         EmailsEditorDirective.prototype.link = function (scope, element, attrs) {
         };

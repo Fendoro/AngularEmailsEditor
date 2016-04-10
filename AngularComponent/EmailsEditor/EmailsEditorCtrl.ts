@@ -24,7 +24,7 @@
         static $inject: string[] = ["$scope", "emailsEditorService"];
 
         constructor(private $scope: IEmailsEditorCtrlScope, private service: EmailsEditorService) {
-            $scope.title = "emailsEditorCtrl";
+            $scope.title = "";
             $scope.emails = service.getEmails();
             $scope.frmData = {
                 inEmail: ""

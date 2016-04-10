@@ -5,6 +5,7 @@
     }
 
     interface IEmailsEditorDirectiveScope extends ng.IScope {
+        title: string;
     }
 
     interface IEmailsEditorDirectiveAttributes extends ng.IAttributes {
@@ -15,8 +16,11 @@
         restrict = "E";
         templateUrl = "EmailsEditor\\DirectievesTemplates\\EmailsEditorDirectiveTemplate.html";
         controller = "emailsEditorCtrl";
-        link(scope: IEmailsEditorDirectiveScope, element: ng.IAugmentedJQuery, attrs: IEmailsEditorDirectiveAttributes) {
+        scope = {
+            title: "@myTitle"
+        };
 
+        link(scope: IEmailsEditorDirectiveScope, element: ng.IAugmentedJQuery, attrs: IEmailsEditorDirectiveAttributes) {
         }
 
         static instance($window: ng.IWindowService): IEmailsEditorDirective {
