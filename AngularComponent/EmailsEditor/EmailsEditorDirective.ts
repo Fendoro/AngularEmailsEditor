@@ -4,8 +4,9 @@
     interface IEmailsEditorDirective extends ng.IDirective {
     }
 
-    interface IEmailsEditorDirectiveScope extends ng.IScope {
+    export interface IEmailsEditorDirectiveScope extends ng.IScope {
         title: string;
+        emailContainer: EmailContainer;
     }
 
     interface IEmailsEditorDirectiveAttributes extends ng.IAttributes {
@@ -13,11 +14,14 @@
 
     class EmailsEditorDirective implements IEmailsEditorDirective {
         static $inject = ["$window"];
+        transclude = true;
+        replace = true;
         restrict = "E";
         templateUrl = "EmailsEditor\\DirectievesTemplates\\EmailsEditorDirectiveTemplate.html";
         controller = "emailsEditorCtrl";
         scope = {
-            title: "@myTitle"
+            title: "@header", 
+            emailContainer: "="
         };
 
         link(scope: IEmailsEditorDirectiveScope, element: ng.IAugmentedJQuery, attrs: IEmailsEditorDirectiveAttributes) {

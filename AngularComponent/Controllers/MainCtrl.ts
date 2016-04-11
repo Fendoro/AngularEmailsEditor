@@ -1,27 +1,25 @@
 ﻿module App {
     "use strict";
-    import EmailsEditorService = EmailsEditor.EmailsEditorService;
 
     interface IMainCtrlScope extends ng.IScope {
-        title: string;
         controller: MainCtrl;
+        emailContainer: EmailsEditor.EmailContainer;
     }
 
     class MainCtrl {
         static id = "mainCtrl";
-        static $inject: string[] = ["$scope","emailsEditorService"];
-
-        constructor(private $scope: IMainCtrlScope, private service: EmailsEditorService) {
-            $scope.title = "MainCtrl";
-            $scope.controller = this;
+        static $inject: string[] = ["$scope","generateEmailsService"];
+        emailContainer: EmailsEditor.EmailContainer;
+        constructor(private $scope: IMainCtrlScope, private service: GenerateEmailsService) {
+            this.emailContainer = new EmailsEditor.EmailContainer();
         }
 
         getEmailsCount(): void {
-            alert(this.service.getEmails().length);
+            alert(this.emailContainer.emails.length);
         }
 
         addEmails(): void {
-            this.service.generateEmail();
+            this.service.generateEmail(this.emailContainer);
         }
     }
 

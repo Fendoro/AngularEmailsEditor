@@ -32,12 +32,13 @@
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
     <TypeScriptCompile Include="EmailsEditor\Email.ts" />
+    <TypeScriptCompile Include="EmailsEditor\EmailContainer.ts" />
     <TypeScriptCompile Include="EmailsEditor\EmailsEditorCtrl.ts" />
     <TypeScriptCompile Include="Controllers\MainCtrl.ts" />
     <TypeScriptCompile Include="DefinitelyTyped\angular.d.ts" />
     <TypeScriptCompile Include="DefinitelyTyped\jquery.d.ts" />
     <TypeScriptCompile Include="EmailsEditor\EmailsEditorDirective.ts" />
-    <TypeScriptCompile Include="EmailsEditor\EmailsEditorService.ts" />
+    <TypeScriptCompile Include="Services\GenerateEmailsService.ts" />
     <TypeScriptCompile Include="EmailsEditor\Helper.ts" />
   </ItemGroup>
   <ItemGroup>

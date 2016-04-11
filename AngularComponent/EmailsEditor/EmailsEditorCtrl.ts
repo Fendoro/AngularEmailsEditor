@@ -5,11 +5,7 @@
         inEmail: string;
     }
 
-    export interface IEmailsEditorCtrlScope extends ng.IScope {
-        title: string;
-        emails: Array<Email>;
-        addEmail: (event: JQueryKeyEventObject) => void;
-        deleteEmail: (email: string) => void;
+    export interface IEmailsEditorCtrlScope extends IEmailsEditorDirectiveScope {
         frmData: IFormData;
         controller: EmailsEditorCtrl;
     }
@@ -21,23 +17,29 @@
 
     export class EmailsEditorCtrl {
         static id = "emailsEditorCtrl";
-        static $inject: string[] = ["$scope", "emailsEditorService"];
+        static $inject: string[] = ["$scope"];
 
-        constructor(private $scope: IEmailsEditorCtrlScope, private service: EmailsEditorService) {
-            $scope.title = "";
-            $scope.emails = service.getEmails();
+        constructor(private $scope: IEmailsEditorCtrlScope) {
             $scope.frmData = {
                 inEmail: ""
             };
             $scope.controller = this;
         }
 
-        private get emails() {
-            return this.$scope.emails;
+        get emailContainer() {
+            return this.$scope.emailContainer;
+        }
+
+        get emails() {
+            return this.emailContainer.emails;
+        }
+
+        get hasEmails() {
+            return this.emails ? this.emails.length > 0 : false;
         }
 
         deleteEmail(email: string): void {
-            this.service.deleteEmail(email);
+            this.emailContainer.deleteEmail(email);
         }
 
         keyPressHandler(event: JQueryKeyEventObject): void {
@@ -64,7 +66,7 @@
 
         addEmail(email: string): void {
             if (email) {
-                this.service.addEmail(email);
+                this.emailContainer.addEmail(email);
             }
             this.$scope.frmData.inEmail = "";
         }
