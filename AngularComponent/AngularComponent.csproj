@@ -22,24 +22,25 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app.css" />
-    <Content Include="EmailsEditor\DirectievesTemplates\EmailsEditorDirectiveTemplate.html">
+    <Content Include="css\app.css" />
+    <Content Include="css\emails-editor.css" />
+    <Content Include="app\emails-editor\emails-editor.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="index.html" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app.ts" />
-    <TypeScriptCompile Include="EmailsEditor\Email.ts" />
-    <TypeScriptCompile Include="EmailsEditor\EmailContainer.ts" />
-    <TypeScriptCompile Include="EmailsEditor\EmailsEditorCtrl.ts" />
-    <TypeScriptCompile Include="Controllers\MainCtrl.ts" />
+    <TypeScriptCompile Include="app\app.ts" />
+    <TypeScriptCompile Include="app\emails-editor\email.ts" />
+    <TypeScriptCompile Include="app\emails-editor\emails-container.ts" />
+    <TypeScriptCompile Include="app\emails-editor\emails-editor.controller.ts" />
+    <TypeScriptCompile Include="app\container.controller.ts" />
     <TypeScriptCompile Include="DefinitelyTyped\angular.d.ts" />
     <TypeScriptCompile Include="DefinitelyTyped\jquery.d.ts" />
-    <TypeScriptCompile Include="EmailsEditor\EmailsEditorDirective.ts" />
-    <TypeScriptCompile Include="Services\GenerateEmailsService.ts" />
-    <TypeScriptCompile Include="EmailsEditor\Helper.ts" />
+    <TypeScriptCompile Include="app\emails-editor\emails-editor.directive.ts" />
+    <TypeScriptCompile Include="app\emails.service.ts" />
+    <TypeScriptCompile Include="app\emails-editor\helper.ts" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GitHub.pubxml" />
@@ -84,7 +85,7 @@
     <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
     <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
     <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
-    <TypeScriptModuleKind />
+    <TypeScriptModuleKind>System</TypeScriptModuleKind>
     <TypeScriptOutFile>app.js</TypeScriptOutFile>
     <TypeScriptOutDir />
     <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
@@ -99,7 +100,7 @@
     <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
     <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
     <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
-    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <TypeScriptModuleKind>System</TypeScriptModuleKind>
     <TypeScriptOutFile>app.js</TypeScriptOutFile>
     <TypeScriptOutDir>
     </TypeScriptOutDir>

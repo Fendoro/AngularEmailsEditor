@@ -1,0 +1,82 @@
+﻿.emails-editor {
+    background-color: #F5F5F5;
+    padding: 35px 40px 30px 40px;
+    display: inline-block;
+    width: calc(100% - 80px);
+}
+
+    .emails-editor > h1 {
+        font-size: 20px;
+        margin: 0;
+        margin-bottom: 40px;
+        font-weight: lighter;
+    }
+
+.emails-editor-blocks {
+    overflow: auto;
+    background-color: #FFFFFF;
+    -webkit-box-shadow: 0 1px 0 0 #CCCCCC inset;
+    -ms-box-shadow: 0 1px 0 0 #CCCCCC inset;
+    box-shadow: 0 1px 0 0 #CCCCCC inset;
+    padding: 10px 5px 5px 10px;
+    height: 100px;
+}
+
+    .emails-editor-blocks div {
+        display: inline-block;
+        margin: 0 5px 5px 0;
+        padding: 2px 5px;
+    }
+
+    .emails-editor-blocks input {
+        border: none;
+    }
+
+        .emails-editor-blocks input:focus {
+            outline: none;
+        }
+
+.emails-editor-bubble {
+    background-color: #D9E8FF;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+}
+
+    .emails-editor-bubble button:focus {
+        outline: none;
+    }
+
+    .emails-editor-bubble > span {
+        margin-right: 5px;
+    }
+
+        .emails-editor-bubble > span.underline {
+            border-bottom: 1px solid red;
+        }
+
+.emails-editor-close {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2;
+}
+
+    .emails-editor-close:focus, .emails-editor-close:hover {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        filter: alpha(opacity=50);
+        opacity: .5;
+    }
+
+button.emails-editor-close {
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+}

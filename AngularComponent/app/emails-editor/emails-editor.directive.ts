@@ -17,7 +17,7 @@
         transclude = true;
         replace = true;
         restrict = "E";
-        templateUrl = "EmailsEditor\\DirectievesTemplates\\EmailsEditorDirectiveTemplate.html";
+        templateUrl = "app\\emails-editor\\emails-editor.html";
         controller = "emailsEditorCtrl";
         scope = {
             title: "@header", 

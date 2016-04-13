@@ -243,3 +243,7 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/AngularComponent/app/app.js.map
+/AngularComponent/app/app.js
+/AngularComponent/app.js
+/AngularComponent/app.js.map
