@@ -6,7 +6,7 @@
 
     export interface IEmailsEditorDirectiveScope extends ng.IScope {
         title: string;
-        emailContainer: EmailContainer;
+        emailsContainer: EmailsContainer;
     }
 
     interface IEmailsEditorDirectiveAttributes extends ng.IAttributes {
@@ -21,7 +21,7 @@
         controller = "emailsEditorCtrl";
         scope = {
             title: "@header", 
-            emailContainer: "="
+            emailsContainer: "="
         };
 
         link(scope: IEmailsEditorDirectiveScope, element: ng.IAugmentedJQuery, attrs: IEmailsEditorDirectiveAttributes) {

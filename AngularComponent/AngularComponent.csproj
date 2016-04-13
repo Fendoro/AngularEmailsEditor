@@ -35,7 +35,7 @@
     <TypeScriptCompile Include="app\emails-editor\email.ts" />
     <TypeScriptCompile Include="app\emails-editor\emails-container.ts" />
     <TypeScriptCompile Include="app\emails-editor\emails-editor.controller.ts" />
-    <TypeScriptCompile Include="app\container.controller.ts" />
+    <TypeScriptCompile Include="app\emails.controller.ts" />
     <TypeScriptCompile Include="DefinitelyTyped\angular.d.ts" />
     <TypeScriptCompile Include="DefinitelyTyped\jquery.d.ts" />
     <TypeScriptCompile Include="app\emails-editor\emails-editor.directive.ts" />

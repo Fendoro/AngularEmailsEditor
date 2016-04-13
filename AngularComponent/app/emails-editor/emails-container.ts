@@ -1,5 +1,5 @@
 ﻿module EmailsEditor {
-    export class EmailContainer {
+    export class EmailsContainer {
         private _emails: Email[];
 
         constructor() {
@@ -10,7 +10,7 @@
             return this._emails;
         }
 
-        private findemail(email: string): number {
+        private findEmail(email: string): number {
             for (var i = 0, len = this._emails.length; i < len; i++) {
                 if (this._emails[i].email === email) {
                     return i;
@@ -20,14 +20,14 @@
         }
 
         addEmail(email: string): void {
-            let index = this.findemail(email);
+            let index = this.findEmail(email);
             if (index === -1) {
                 this._emails.push(new Email(email));
             }
         }
 
         deleteEmail(email: string): void {
-            let index = this.findemail(email);
+            let index = this.findEmail(email);
             if (index > -1) {
                 this._emails.splice(index, 1);
             }

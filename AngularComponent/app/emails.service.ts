@@ -1,13 +1,13 @@
 ﻿module App {
-    import EmailContainer = EmailsEditor.EmailContainer;
+    import EmailContainer = EmailsEditor.EmailsContainer;
     "use strict";
 
     export interface IEmailsService {
         generateEmail: (email: EmailContainer) => void;
     }
 
-    export class GenerateEmailsService implements IEmailsService {
-        static id = "emailsEditorService";
+    export class EmailsService implements IEmailsService {
+        static id = "emailsService";
         static $inject: string[] = ["$http"];
 
         constructor(private $http: ng.IHttpService) {
@@ -20,5 +20,5 @@
         }
     }
 
-    angular.module("app").service("generateEmailsService", GenerateEmailsService);
+    angular.module("app").service("emailsService", EmailsService);
 }

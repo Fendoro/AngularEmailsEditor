@@ -27,7 +27,7 @@
         }
 
         get emailContainer() {
-            return this.$scope.emailContainer;
+            return this.$scope.emailsContainer;
         }
 
         get emails() {
@@ -35,7 +35,7 @@
         }
 
         get hasEmails() {
-            return this.emails ? this.emails.length > 0 : false;
+            return this.emails && this.emails.length > 0;
         }
 
         deleteEmail(email: string): void {
